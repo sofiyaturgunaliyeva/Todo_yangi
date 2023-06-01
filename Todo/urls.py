@@ -6,7 +6,8 @@ from asosiy.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('plans/', hamma_todo),
-    path('', login_view),
+    path('', login_view, name = 'login'),
     path('logout/', logout_view),
     path('reja_ochir/<int:son>/', reja_ochir),
+    path('register/', register),
 ]

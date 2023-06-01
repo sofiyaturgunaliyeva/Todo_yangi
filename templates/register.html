@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Register Page</title>
 	<style>
 		body {
 			background-color: #f2f2f2;
@@ -51,23 +51,22 @@
 	</style>
 </head>
 <body>
-{% if messages %}
-  <div>
-  <ul class="messages">
-    {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-  </ul>
-  </div>
-  {% endif %}
 	<div class="container">
-		<h1>Login Page</h1>
+		<h1>Register Page</h1>
 		<form method="post" >{% csrf_token %}
-			<label for="username">Username:</label>
+			<label for ="i" >Ism:</label>
+			<input type="text" name="i"  id = "i" placeholder="Enter name ...">
+			<label for = "y">Yosh :</label>
+			<input type="text" name="y" id ="y" placeholder="Enter age ...">
+			<label for = "k">Kurs:</label>
+			<input type="text" name="k"  id = "k" placeholder="Enter course ...">
+			<label for="username">Login:</label>
 			<input type="text" name="l" id="username" placeholder="Enter username ...">
-			<label for="password">Password:</label>
+			<label for="password">Parol:</label>
 			<input type="password" name="p" id="password" placeholder="Enter password ...">
-			<button>Login</button>
+			<label for="parol">Parolni tasdiqlash:</label>
+			<input type="password" name="p2" id="parol" placeholder="Confirm password ...">
+			<button>Register</button>
 		</form>
 	</div>
 </body>
